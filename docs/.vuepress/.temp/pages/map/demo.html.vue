@@ -1,0 +1,3 @@
+<template><div><h1 id="map-编辑器" tabindex="-1"><a class="header-anchor" href="#map-编辑器" aria-hidden="true">#</a> map 编辑器 <Badge text="v3.9.3+"/></h1>
+<p>本来使用 <a href="https://github.com/sparksuite/simplemde-markdown-editor" target="_blank" rel="noopener noreferrer">simplemde-markdown-editor<ExternalLinkIcon/></a> 作为 markdown 编辑器，但这个库很久不更新和维护了，而且还有 xss 风险。所以在 <Badge text="v3.9.3+"/> 版本之后使用 <a href="https://github.com/nhnent/tui.editor" target="_blank" rel="noopener noreferrer">tui.editor<ExternalLinkIcon/></a>作为新的编辑器，接下来所有的文档都是基于 tui.editor 它的。<a href="https://github.com/nhnent/tui.editor" target="_blank" rel="noopener noreferrer">更多内容<ExternalLinkIcon/></a>。</p>
+</div></template>

@@ -1,0 +1,24 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "docs | study | advance",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ChiJiongHan",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-beta.49",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "echarts": "^5.1.2",
+    "element-plus": "^2.2.12",
+    "element-ui": "^2.15.9"
+  }
+}

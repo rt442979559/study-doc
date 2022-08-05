@@ -1,0 +1,14 @@
+export const data = JSON.parse("{\"key\":\"v-2ca43df0\",\"path\":\"/skip/plugins.html\",\"title\":\"常用插件\",\"lang\":\"en-US\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"截图插件\",\"slug\":\"截图插件\",\"children\":[{\"level\":3,\"title\":\"安装\",\"slug\":\"安装\",\"children\":[]},{\"level\":3,\"title\":\"引入\",\"slug\":\"引入\",\"children\":[]}]}],\"git\":{},\"filePathRelative\":\"skip/plugins.md\"}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
