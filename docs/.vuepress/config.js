@@ -4,7 +4,7 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { viteBundler } = require('@vuepress/bundler-vite')
 
 module.exports = {
-  title: 'vue press',
+  title: 'study | doc',
   logo: 'https://vuejs.org/images/logo.png',
   theme: defaultTheme({
     navbar: [
@@ -22,8 +22,9 @@ module.exports = {
         text: '地图',
         ariaLabel: 'map',
         children: [
-          { text: '方法', link: '/map/demo/' },
-          { text: '地图', link: '/map/downfile/' }
+          { text: '百度', link: '/map/demo/' },
+          { text: '高德', link: '/map/downfile/' },
+          { text: 'cesium', link: '/map/downfile/' }
         ]
       },
     ],

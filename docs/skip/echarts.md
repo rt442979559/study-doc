@@ -46,6 +46,27 @@
 #### demo 1
 <v-code componentName="chart" quote="punctuation">
 
-@[code{1-200} ts](@docs/.vuepress/json/chart/line.ts)
+@[code{3-161} ts](@docs/.vuepress/json/chart/line.ts)
 
 </v-code>
+
+### 象形折线图 :cloud:
+
+#### demo 2
+<v-code componentName="chart" quote="punctuation2">
+
+@[code{163-361} ts](@docs/.vuepress/json/chart/line.ts)
+
+</v-code>
+
+
+### 时间轴折线图 :cloud:
+
+#### demo 3
+<v-code componentName="chart" quote="punctuation3">
+
+@[code{363-532} ts](@docs/.vuepress/json/chart/line.ts)
+
+</v-code>
+
+
