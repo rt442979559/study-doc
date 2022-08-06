@@ -2,7 +2,7 @@
   <div class="demo-block" :class="[blockClass, { 'hover': hovering }]" @mouseenter="hovering = true"
     @mouseleave="hovering = false">
     <div style="padding:24px">
-      <component :is="componentName" v-if="componentName" v-bind="$attrs" />
+      <component :is="componentName" v-if="componentName" :quote="quote" v-bind="$attrs" />
     </div>
     <div class="meta" ref="meta">
       <div class="description" v-if="$slots.default">
@@ -18,17 +18,16 @@
       </transition>
       <transition name="text-slide">
         <div class="text-slide-block">
-          asd
           <span v-show="hovering">{{ controlText }}</span>
         </div>
       </transition>
     </div>
   </div>
 </template>
-<script type="text/babel">
-// import { CaretBottom } from '@element-plus/icons-vue' // svg图标
+<script >
+import { CaretBottom } from '@element-plus/icons-vue' // svg图标
 export default {
-  // components:{ CaretBottom }
+
   data() {
     return {
       hovering: false,
@@ -42,7 +41,7 @@ export default {
     };
   },
 
-  props:['componentName'],
+  props:['componentName','quote'],
 
   methods: {
     scrollHandler() {
@@ -122,8 +121,8 @@ export default {
 
 <style lang="scss">
 .demo-block {
+  margin-top: 1rem;
   border: solid 1px #ebebeb;
-  // border-radius: 3px;
   transition: .2s;
   margin-bottom: 1.5rem;
 
@@ -145,7 +144,7 @@ export default {
   }
 
   .meta {
-    background-color: #fafafa;
+    // background-color: #fafafa;
     border-top: solid 1px #eaeefb;
     overflow: hidden;
     height: 0;
@@ -206,7 +205,7 @@ export default {
     border-top: solid 1px #eaeefb;
     height: 44px;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: transparent;
     // border-bottom-left-radius: 4px;
     // border-bottom-right-radius: 4px;
     text-align: center;
@@ -242,7 +241,7 @@ export default {
 
     &:hover {
       color: #409EFF;
-      background-color: #f9fafc;
+      // background-color: #f9fafc;
     }
 
     & .text-slide-enter,

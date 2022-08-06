@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-2ca43df0\",\"path\":\"/skip/plugins.html\",\"title\":\"常用插件\",\"lang\":\"en-US\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"截图插件\",\"slug\":\"截图插件\",\"children\":[{\"level\":3,\"title\":\"安装\",\"slug\":\"安装\",\"children\":[]},{\"level\":3,\"title\":\"引入\",\"slug\":\"引入\",\"children\":[]}]}],\"git\":{},\"filePathRelative\":\"skip/plugins.md\"}")
+export const data = JSON.parse("{\"key\":\"v-2ca43df0\",\"path\":\"/skip/plugins.html\",\"title\":\"常用插件\",\"lang\":\"en-US\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"截图插件\",\"slug\":\"截图插件\",\"children\":[{\"level\":3,\"title\":\"安装\",\"slug\":\"安装\",\"children\":[]},{\"level\":3,\"title\":\"引入\",\"slug\":\"引入\",\"children\":[]}]}],\"git\":{\"updatedTime\":1659680092000,\"contributors\":[{\"name\":\"hero\",\"email\":\"rt442979559@qq.com\",\"commits\":1}]},\"filePathRelative\":\"skip/plugins.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

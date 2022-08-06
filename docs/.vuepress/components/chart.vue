@@ -5,13 +5,21 @@
 </template>
 
 <script setup lang='ts'>
+import { CaretBottom } from '@element-plus/icons-vue' // svg图标
 import * as echarts from 'echarts'
 import { onMounted, ref } from 'vue'
-import { getEchartOption } from '../json/echartOption.ts'
+import * as chartOption from '../json/chart/index.ts'
+
+const props = defineProps({
+  quote: {
+    type: String,
+    default: ''
+  },
+})
 
 const chart = ref<HTMLDivElement | null>()
 const initEchart = () => {
-  const option = getEchartOption('fuwu')
+  const option = chartOption[props.quote]()
   echarts.init(chart.value as HTMLDivElement).setOption(option)
 }
 

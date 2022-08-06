@@ -42,7 +42,10 @@ module.exports = {
   plugins: [
     // 注册全局组件
     registerComponentsPlugin({
-      componentsDir: path.resolve(__dirname, './components')
+      // components:{
+      //   'count':path.resolve(__dirname, './components/chart/count.vue')
+      // },
+      componentsDir: path.resolve(__dirname, './components'),
     }),
   ],
   // 引入别名
