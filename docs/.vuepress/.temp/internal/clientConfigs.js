@@ -1,11 +1,11 @@
-import clientConfig0 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
-import clientConfig1 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
-import clientConfig2 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-external-link-icon/lib/client/config.js'
-import clientConfig3 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
-import clientConfig4 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
-import clientConfig5 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
-import clientConfig6 from 'F:/WorkSpace/press/vuepress-starter/node_modules/@vuepress/theme-default/lib/client/config.js'
-import clientConfig7 from 'F:/WorkSpace/press/vuepress-starter/docs/.vuepress/.temp/register-components/clientConfig.60547f22.js'
+import clientConfig0 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-active-header-links/lib/client/config.js'
+import clientConfig1 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-back-to-top/lib/client/config.js'
+import clientConfig2 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-external-link-icon/lib/client/config.js'
+import clientConfig3 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-medium-zoom/lib/client/config.js'
+import clientConfig4 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
+import clientConfig5 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
+import clientConfig6 from 'F:/WorkSpace/study-doc/node_modules/@vuepress/theme-default/lib/client/config.js'
+import clientConfig7 from 'F:/WorkSpace/study-doc/docs/.vuepress/.temp/register-components/clientConfig.6186aed0.js'
 
 export const clientConfigs = [
   clientConfig0,

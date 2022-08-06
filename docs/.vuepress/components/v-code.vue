@@ -25,7 +25,6 @@
   </div>
 </template>
 <script >
-import { CaretBottom } from '@element-plus/icons-vue' // svg图标
 export default {
 
   data() {

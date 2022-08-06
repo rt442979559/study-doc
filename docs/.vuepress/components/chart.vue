@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang='ts'>
-import { CaretBottom } from '@element-plus/icons-vue' // svg图标
 import * as echarts from 'echarts'
 import { onMounted, ref } from 'vue'
 import * as chartOption from '../json/chart/index.ts'
