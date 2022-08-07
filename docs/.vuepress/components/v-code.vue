@@ -279,27 +279,4 @@ pre[class*=language-] code{
   line-height:1.4 !important;
 }
 
-/** 滚动条 */
-::-webkit-scrollbar {
-  width: 10px ;
-  height: 10px ;
-}
-::-webkit-scrollbar-thumb{
-  height: 160px !important;
-  background: #d1d8e6;
-  background-clip: content-box;
-  border: 2px solid transparent;
-  border-radius: 19px;
-  opacity: 0.8;
-}
-::-webkit-scrollbar-thumb:hover{
-  background: #a5b3cf;
-  background-clip: content-box;
-  border: 2px solid transparent;
-}
-::-webkit-scrollbar-track-piece{
-  width: 30px;
-  height: 30px;
-  background: #fff;
-}
 </style>
