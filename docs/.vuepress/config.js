@@ -4,16 +4,26 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { viteBundler } = require('@vuepress/bundler-vite')
 
 module.exports = {
+  port: '8080', //端口号
   title: 'study | doc',
-  logo: 'https://vuejs.org/images/logo.png',
+  description: 'ChiJiongHan | Study | Doc',
+  logo: '🚀',
   theme: defaultTheme({
     repo: 'rt442979559/study-doc',
     docsRepo: 'rt442979559/doc',
-    description: 'ChiJiongHan | Doc | Study',
     docsDir: 'docs | study',
     smoothScroll:true,
     editLinks: false,
     sidebarDepth: 3,
+    head: [
+      [
+        'link',
+        {
+          rel: 'icon',
+          href: '/favicon.ico'
+        }
+      ]
+    ],
     navbar: [
       { text: '主页', link: '/' },
       {
@@ -30,9 +40,9 @@ module.exports = {
         text: '地图',
         ariaLabel: 'map',
         children: [
-          { text: '百度', link: '/map/demo/' },
-          { text: '高德', link: '/map/downfile/' },
-          { text: 'cesium', link: '/map/downfile/' }
+          { text: '百度', link: '/map/bdmap/' },
+          { text: '高德', link: '/map/gdmap/' },
+          { text: 'cesium', link: '/map/cesium/' }
         ]
       },
     ],
@@ -44,8 +54,9 @@ module.exports = {
         '/skip/components.md',
       ],
       '/map/':[
-        '/map/downfile.md',
-        '/map/demo.md',
+        '/map/bdmap.md',
+        '/map/gdmap.md',
+        '/map/cesium.md',
       ]
     }
   }),

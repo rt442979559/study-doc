@@ -5,6 +5,12 @@ export const pagesComponents = {
   "v-e0a8de3a": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0a8de3a" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/count.html.vue")),
   // path: /
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/index.html.vue")),
+  // path: /map/bdmap.html
+  "v-23c6f5ea": defineAsyncComponent(() => import(/* webpackChunkName: "v-23c6f5ea" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/map/bdmap.html.vue")),
+  // path: /map/cesium.html
+  "v-efdfe886": defineAsyncComponent(() => import(/* webpackChunkName: "v-efdfe886" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/map/cesium.html.vue")),
+  // path: /map/gdmap.html
+  "v-98e88ab4": defineAsyncComponent(() => import(/* webpackChunkName: "v-98e88ab4" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/map/gdmap.html.vue")),
   // path: /skip/components.html
   "v-99b28928": defineAsyncComponent(() => import(/* webpackChunkName: "v-99b28928" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/skip/components.html.vue")),
   // path: /skip/echarts.html
@@ -13,10 +19,6 @@ export const pagesComponents = {
   "v-0192251e": defineAsyncComponent(() => import(/* webpackChunkName: "v-0192251e" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/skip/methods.html.vue")),
   // path: /skip/plugins.html
   "v-2ca43df0": defineAsyncComponent(() => import(/* webpackChunkName: "v-2ca43df0" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/skip/plugins.html.vue")),
-  // path: /map/demo.html
-  "v-12716cec": defineAsyncComponent(() => import(/* webpackChunkName: "v-12716cec" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/map/demo.html.vue")),
-  // path: /map/downfile.html
-  "v-e01cbda2": defineAsyncComponent(() => import(/* webpackChunkName: "v-e01cbda2" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/map/downfile.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"F:/WorkSpace/study-doc/docs/.vuepress/.temp/pages/404.html.vue")),
 }
