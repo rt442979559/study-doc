@@ -7,6 +7,13 @@ module.exports = {
   title: 'study | doc',
   logo: 'https://vuejs.org/images/logo.png',
   theme: defaultTheme({
+    repo: 'rt442979559/study-doc',
+    docsRepo: 'rt442979559/doc',
+    description: 'ChiJiongHan | Doc | Study',
+    docsDir: 'docs | study',
+    smoothScroll:true,
+    editLinks: false,
+    sidebarDepth: 3,
     navbar: [
       { text: '主页', link: '/' },
       {
@@ -16,6 +23,7 @@ module.exports = {
           { text: '图表', link: '/skip/echarts/' },
           { text: '方法', link: '/skip/methods/' },
           { text: '插件', link: '/skip/plugins/' },
+          { text: '组件', link: '/skip/components/' },
         ]
       },
       {
@@ -33,6 +41,7 @@ module.exports = {
         '/skip/echarts.md',
         '/skip/methods.md',
         '/skip/plugins.md',
+        '/skip/components.md',
       ],
       '/map/':[
         '/map/downfile.md',

@@ -7,7 +7,7 @@
 ### 安装
 
 ```shell
-npm install vue-web-screen-shot
+npm i vue-web-screen-shot
 ```
 
 ### 引入

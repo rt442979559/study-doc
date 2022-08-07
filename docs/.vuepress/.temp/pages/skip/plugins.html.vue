@@ -4,7 +4,7 @@
 <p><a href="https://www.npmjs.com/package/vue-web-screen-shot" target="_blank" rel="noopener noreferrer">web 端自定义截屏插件<ExternalLinkIcon/></a>，仅支持 Vue3。如需在 vue2 使用请移步 ：<a href="https://www.npmjs.com/package/js-web-screen-shot" target="_blank" rel="noopener noreferrer">js-web-screen-shot<ExternalLinkIcon/></a></p>
 </blockquote>
 <h3 id="安装" tabindex="-1"><a class="header-anchor" href="#安装" aria-hidden="true">#</a> 安装</h3>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> vue-web-screen-shot
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">npm</span> i vue-web-screen-shot
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="引入" tabindex="-1"><a class="header-anchor" href="#引入" aria-hidden="true">#</a> 引入</h3>
 <div class="language-typescript ext-ts line-numbers-mode"><pre v-pre class="language-typescript"><code><span class="token comment">// 导入截屏插件</span>
 <span class="token keyword">import</span> screenShort <span class="token keyword">from</span> <span class="token string">'vue-web-screen-shot'</span>
