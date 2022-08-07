@@ -69,4 +69,66 @@
 
 </v-code>
 
+### 极值折线图 :cloud:
+
+#### demo 4
+
+<v-code componentName="chart" quote="punctuation4">
+
+@[code{534-634} ts](@docs/.vuepress/json/chart/line.ts)
+
+</v-code>
+
+## 饼图 :ringed_planet:
+
+### 百分比饼图 :cloud:
+
+#### demo 1
+
+<v-code componentName="chart" quote="pie">
+
+@[code{3-118} ts](@docs/.vuepress/json/chart/pie.ts)
+
+</v-code>
+
+### 嵌套饼图 :cloud:
+
+#### demo 2
+
+<v-code componentName="chart" quote="pie2">
+
+@[code{120-205} ts](@docs/.vuepress/json/chart/pie.ts)
+
+</v-code>
+
+### 仪表盘 :cloud:
+
+#### demo 3
+
+<v-code componentName="chart" quote="pie3">
+
+@[code{207-416} ts](@docs/.vuepress/json/chart/pie.ts)
+
+</v-code>
+
+### 雷达图 :cloud:
+
+#### demo 4
+
+<v-code componentName="chart" quote="pie4">
+
+@[code{418-656} ts](@docs/.vuepress/json/chart/pie.ts)
+
+</v-code>
+
+### 渐变雷达图 :cloud:
+
+#### demo 5
+
+<v-code componentName="chart" quote="pie5">
+
+@[code{658-791} ts](@docs/.vuepress/json/chart/pie.ts)
+
+</v-code>
+
 
