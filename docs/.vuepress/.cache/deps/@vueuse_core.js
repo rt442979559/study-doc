@@ -4,6 +4,7 @@ import {
   effectScope,
   getCurrentInstance,
   getCurrentScope,
+  init_vue_runtime_esm_bundler,
   inject,
   isReactive,
   isRef,
@@ -26,11 +27,30 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-TVEHGJEI.js";
-import "./chunk-AVTOPKID.js";
-import "./chunk-RSHBMBKM.js";
+} from "./chunk-4NDRJJJZ.js";
+import "./chunk-EQIJPKY4.js";
+import {
+  init_define_EXTERNAL_LINK_ICON_LOCALES,
+  init_define_MZ_ZOOM_OPTIONS
+} from "./chunk-X5H6CEJ3.js";
+
+// dep:@vueuse_core
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
+
+// node_modules/@vueuse/core/index.mjs
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
+
+// node_modules/@vueuse/shared/index.mjs
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
 
 // node_modules/vue-demi/lib/index.mjs
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
+init_vue_runtime_esm_bundler();
+init_vue_runtime_esm_bundler();
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {

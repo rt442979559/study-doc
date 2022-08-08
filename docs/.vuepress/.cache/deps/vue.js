@@ -51,6 +51,7 @@ import {
   hydrate,
   initCustomFormatter,
   initDirectivesForSSR,
+  init_vue_runtime_esm_bundler,
   inject,
   isMemoSame,
   isProxy,
@@ -137,7 +138,7 @@ import {
   withMemo,
   withModifiers,
   withScopeId
-} from "./chunk-TVEHGJEI.js";
+} from "./chunk-4NDRJJJZ.js";
 import {
   camelize,
   capitalize,
@@ -146,8 +147,16 @@ import {
   normalizeStyle,
   toDisplayString,
   toHandlerKey
-} from "./chunk-AVTOPKID.js";
-import "./chunk-RSHBMBKM.js";
+} from "./chunk-EQIJPKY4.js";
+import {
+  init_define_EXTERNAL_LINK_ICON_LOCALES,
+  init_define_MZ_ZOOM_OPTIONS
+} from "./chunk-X5H6CEJ3.js";
+
+// dep:vue
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
+init_vue_runtime_esm_bundler();
 export {
   BaseTransition,
   Comment,
