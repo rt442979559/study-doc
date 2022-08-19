@@ -341,3 +341,79 @@ methods: {
   },
 }
 ```
+
+## 校验规则
+
+### 是否为外链
+```ts
+export const isExternal = (path): boolean => {
+  return /^(https?:|mailto:|tel:)/.test(path)
+}
+```
+
+### 是否为Url
+```ts
+export const isUrl = (path: string): boolean => {
+  const reg =
+    /^(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?(\/#\/)?(?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
+  return reg.test(path);
+}
+```
+
+### 密码校验
+```ts
+export const isPassword = (str): boolean => {
+  const reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{6,16}$/
+  return reg.test(str)
+}
+```
+
+### 是否为字符串
+```ts
+export const isString = (): boolean => {
+  return typeof str === 'string' || str instanceof String
+}
+```
+
+### 是否为数组
+```ts
+export const isArray = (arr): boolean => {
+  if (typeof Array.isArray === 'undefined') {
+    return Object.prototype.toString.call(arg) === '[object Array]'
+  }
+  return Array.isArray(arg)
+}
+```
+
+### 是否为手机号
+```ts
+export const isPhone = (phone): boolean => {
+  return /^1[3456789]\d{9}$/.test(phone)
+}
+```
+
+### 随机数（uuid）
+```ts
+export const uuid = (length = 32): string => {
+  const num = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+  let str = ''
+  for (let i = 0; i < length; i++) {
+    str += num.charAt(Math.floor(Math.random() * num.length))
+  }
+  return str
+}
+```
+
+### 随机数（两数之间）
+```ts
+export const getRandomNum = (min, max): number => {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+```
+## 工具库@vueuse/core
+
+### 引入
+[vueuse/core](https://www.npmjs.com/package/@vueuse/core)
+
+### 文档
+[方法文档](https://vueuse.org/core/useDraggable/)

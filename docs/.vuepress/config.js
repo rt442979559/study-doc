@@ -2,6 +2,7 @@ const path = require("path");
 const { defaultTheme } = require('@vuepress/theme-default')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { viteBundler } = require('@vuepress/bundler-vite')
+const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 
 module.exports = {
   port: '8080', //端口号
@@ -12,8 +13,8 @@ module.exports = {
     repo: 'rt442979559/study-doc',
     docsRepo: 'rt442979559/doc',
     docsDir: 'docs | study',
-    smoothScroll:true,
-    editLinks: false,
+    // smoothScroll:true,
+    editLink: false,
     sidebarDepth: 3,
     head: [
       [
@@ -68,6 +69,9 @@ module.exports = {
       // },
       componentsDir: path.resolve(__dirname, './components'),
     }),
+    prismjsPlugin({
+      // 配置项
+    })
   ],
   // 引入别名
   markdown: {

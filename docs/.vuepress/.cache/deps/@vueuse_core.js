@@ -4,7 +4,6 @@ import {
   effectScope,
   getCurrentInstance,
   getCurrentScope,
-  init_vue_runtime_esm_bundler,
   inject,
   isReactive,
   isRef,
@@ -27,30 +26,11 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-4NDRJJJZ.js";
-import "./chunk-EQIJPKY4.js";
-import {
-  init_define_EXTERNAL_LINK_ICON_LOCALES,
-  init_define_MZ_ZOOM_OPTIONS
-} from "./chunk-X5H6CEJ3.js";
+} from "./chunk-TVEHGJEI.js";
+import "./chunk-AVTOPKID.js";
+import "./chunk-RSHBMBKM.js";
 
-// dep:@vueuse_core
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/@vueuse/core/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/@vueuse/shared/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/vue-demi/lib/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-init_vue_runtime_esm_bundler();
-init_vue_runtime_esm_bundler();
+// node_modules/@vuepress/theme-default/node_modules/@vueuse/core/node_modules/vue-demi/lib/index.mjs
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {
@@ -70,7 +50,7 @@ function del(target, key) {
   delete target[key];
 }
 
-// node_modules/@vueuse/shared/index.mjs
+// node_modules/@vuepress/theme-default/node_modules/@vueuse/core/node_modules/@vueuse/shared/index.mjs
 var __defProp$9 = Object.defineProperty;
 var __defProps$6 = Object.defineProperties;
 var __getOwnPropDescs$6 = Object.getOwnPropertyDescriptors;
@@ -1451,7 +1431,7 @@ function whenever(source, cb, options) {
   }, options);
 }
 
-// node_modules/@vueuse/core/index.mjs
+// node_modules/@vuepress/theme-default/node_modules/@vueuse/core/index.mjs
 function computedAsync(evaluationCallback, initialState, optionsOrRef) {
   let options;
   if (isRef(optionsOrRef)) {
