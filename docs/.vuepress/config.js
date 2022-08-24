@@ -26,6 +26,7 @@ module.exports = {
           href: '/favicon.ico',
         },
       ],
+      ['script', { src: '../resource/map.js' }],
     ],
     navbar: [
       { text: '主页', link: '/' },
@@ -86,7 +87,11 @@ module.exports = {
   },
   // vite配置
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      ssr: {
+        noExternal: ['element-plus'],
+      },
+    },
     vuePluginOptions: {},
   }),
 }

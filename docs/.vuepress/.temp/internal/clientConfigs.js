@@ -6,6 +6,7 @@ import clientConfig4 from 'D:/chijh/workspace/my/study-doc/node_modules/@vuepres
 import clientConfig5 from 'D:/chijh/workspace/my/study-doc/node_modules/@vuepress/plugin-theme-data/lib/client/config.js'
 import clientConfig6 from 'D:/chijh/workspace/my/study-doc/node_modules/@vuepress/theme-default/lib/client/config.js'
 import clientConfig7 from 'D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/register-components/clientConfig.161f42ee.js'
+import clientConfig8 from 'D:/chijh/workspace/my/study-doc/docs/.vuepress/client.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -16,4 +17,5 @@ export const clientConfigs = [
   clientConfig5,
   clientConfig6,
   clientConfig7,
+  clientConfig8,
 ]

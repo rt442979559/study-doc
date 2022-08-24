@@ -1,8 +1,17 @@
 <template>
-  <div class="demo-block" :class="[blockClass, { 'hover': hovering }]" @mouseenter="hovering = true"
-    @mouseleave="hovering = false">
-    <div style="padding:24px">
-      <component :is="componentName" v-if="componentName" :quote="quote" v-bind="$attrs" />
+  <div
+    class="demo-block"
+    :class="[blockClass, { hover: hovering }]"
+    @mouseenter="hovering = true"
+    @mouseleave="hovering = false"
+  >
+    <div style="padding: 24px">
+      <component
+        :is="componentName"
+        v-if="componentName"
+        :quote="quote"
+        v-bind="$attrs"
+      />
     </div>
     <div class="meta" ref="meta">
       <div class="description" v-if="$slots.default">
@@ -12,21 +21,30 @@
         <slot name="sourceCode"></slot>
       </div>
     </div>
-    <div class="demo-block-control" ref="control" @click="isExpanded = !isExpanded">
+    <div
+      class="demo-block-control"
+      ref="control"
+      @click="isExpanded = !isExpanded"
+    >
       <transition name="arrow-slide">
-        <i :class="[iconClass, { 'hovering': hovering }]"></i>
+        <i :class="[iconClass, { hovering: hovering }]"></i>
       </transition>
       <transition name="text-slide">
         <div class="text-slide-block">
-          <span v-show="hovering">{{ controlText }}</span>
+          <el-space>
+            <el-icon size="14" v-show="!isExpanded"><CaretBottom /></el-icon>
+            <el-icon size="14" v-show="isExpanded"><CaretTop /></el-icon>
+            <span v-show="hovering">{{ controlText }}</span>
+          </el-space>
         </div>
       </transition>
     </div>
   </div>
 </template>
-<script >
+<script>
+import { CaretBottom, CaretTop } from '@element-plus/icons-vue'
 export default {
-
+  components: { CaretBottom, CaretTop },
   data() {
     return {
       hovering: false,
@@ -34,33 +52,37 @@ export default {
       fixedControl: false,
       scrollParent: null,
       langConfig: {
-        "hide-text": "隐藏代码",
-        "show-text": "显示代码",
-      }
-    };
+        'hide-text': '隐藏代码',
+        'show-text': '显示代码',
+      },
+    }
   },
 
-  props:['componentName','quote'],
+  props: ['componentName', 'quote'],
 
   methods: {
     scrollHandler() {
-      const { top, bottom, left } = this.$refs.meta.getBoundingClientRect();
-      this.fixedControl = bottom > document.documentElement.clientHeight &&
-        top + 44 <= document.documentElement.clientHeight;
+      const { top, bottom, left } = this.$refs.meta.getBoundingClientRect()
+      this.fixedControl =
+        bottom > document.documentElement.clientHeight &&
+        top + 44 <= document.documentElement.clientHeight
     },
 
     removeScrollHandler() {
-      this.scrollParent && this.scrollParent.removeEventListener('scroll', this.scrollHandler);
-    }
+      this.scrollParent &&
+        this.scrollParent.removeEventListener('scroll', this.scrollHandler)
+    },
   },
 
   computed: {
     lang() {
-      return this.$route.path.split('/')[1];
+      return this.$route.path.split('/')[1]
     },
 
     blockClass() {
-      return `demo-${this.lang} demo-${this.$router.currentRoute.value.path.split('/').pop()}`;
+      return `demo-${this.lang} demo-${this.$router.currentRoute.value.path
+        .split('/')
+        .pop()}`
     },
 
     // iconClass() {
@@ -68,69 +90,77 @@ export default {
     // },
 
     controlText() {
-      return this.isExpanded ? this.langConfig['hide-text'] : this.langConfig['show-text'];
+      return this.isExpanded
+        ? this.langConfig['hide-text']
+        : this.langConfig['show-text']
     },
 
     codeArea() {
-      return this.$el.getElementsByClassName('meta')[0];
+      return this.$el.getElementsByClassName('meta')[0]
     },
 
     codeAreaHeight() {
-
       if (this.$el.getElementsByClassName('description').length > 0) {
-        return this.$el.getElementsByClassName('description')[0].clientHeight +
-          this.$el.getElementsByClassName('sourceCode')[0].clientHeight + 20;
+        return (
+          this.$el.getElementsByClassName('description')[0].clientHeight +
+          this.$el.getElementsByClassName('sourceCode')[0].clientHeight +
+          20
+        )
       }
-      return this.$el.getElementsByClassName('sourceCode')[0].clientHeight;
-    }
+      return this.$el.getElementsByClassName('sourceCode')[0].clientHeight
+    },
   },
 
   watch: {
     isExpanded(val) {
-      this.codeArea.style.height = val ? `${this.codeAreaHeight + 1}px` : '0';
+      this.codeArea.style.height = val ? `${this.codeAreaHeight + 1}px` : '0'
       if (!val) {
-        this.fixedControl = false;
-        this.$refs.control.style.left = '0';
-        this.removeScrollHandler();
-        return;
+        this.fixedControl = false
+        this.$refs.control.style.left = '0'
+        this.removeScrollHandler()
+        return
       }
       setTimeout(() => {
-        this.scrollParent = document.querySelector('.page-component__scroll > .el-scrollbar__wrap');
-        this.scrollParent && this.scrollParent.addEventListener('scroll', this.scrollHandler);
-        this.scrollHandler();
-      }, 200);
-    }
+        this.scrollParent = document.querySelector(
+          '.page-component__scroll > .el-scrollbar__wrap'
+        )
+        this.scrollParent &&
+          this.scrollParent.addEventListener('scroll', this.scrollHandler)
+        this.scrollHandler()
+      }, 200)
+    },
   },
 
   mounted() {
     this.$nextTick(() => {
-      let sourceCode = this.$el.getElementsByClassName('sourceCode')[0];
+      let sourceCode = this.$el.getElementsByClassName('sourceCode')[0]
       if (this.$el.getElementsByClassName('description').length === 0) {
-        sourceCode.style.width = '100%';
-        sourceCode.borderRight = 'none';
+        sourceCode.style.width = '100%'
+        sourceCode.borderRight = 'none'
       }
-    });
+    })
   },
 
   beforeDestroy() {
-    this.removeScrollHandler();
-  }
-};
+    this.removeScrollHandler()
+  },
+}
 </script>
 
 <style lang="scss">
 .demo-block {
   margin-top: 1rem;
   border: solid 1px #ebebeb;
-  transition: .2s;
+  transition: 0.2s;
   margin-bottom: 1.5rem;
 
   &.hover {
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5);
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
+      0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
 
   code {
-    line-height:2.52;
+    line-height: 2.52;
     font-family: Menlo, Monaco, Consolas, Courier, monospace;
   }
 
@@ -147,7 +177,7 @@ export default {
     border-top: solid 1px #eaeefb;
     overflow: hidden;
     height: 0;
-    transition: height .2s;
+    transition: height 0.2s;
   }
 
   .description {
@@ -196,8 +226,6 @@ export default {
         content: none;
       }
     }
-
-
   }
 
   .demo-block-control {
@@ -222,24 +250,26 @@ export default {
     i {
       font-size: 16px;
       line-height: 44px;
-      transition: .3s;
+      transition: 0.3s;
 
       &.hovering {
+        transition: 0.3s;
         transform: translateX(-40px);
       }
     }
 
-    >span {
+    > span {
       position: absolute;
       transform: translateX(-30px);
       font-size: 14px;
       line-height: 44px;
-      transition: .3s;
+      transition: 0.3s;
       display: inline-block;
     }
 
     &:hover {
-      color: #409EFF;
+      transition: 0.3s;
+      color: #409eff;
       // background-color: #f9fafc;
     }
 
@@ -248,11 +278,16 @@ export default {
       opacity: 0;
       transform: translateX(10px);
     }
-    .text-slide-block{
+    .text-slide-block {
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      svg {
+        path {
+          font-size: 12px;
+        }
+      }
     }
 
     .control-button {
@@ -267,16 +302,15 @@ export default {
   }
 }
 
-div[class*="language-"].line-numbers-mode::after{
-  height:calc(100% - 1px);
+div[class*='language-'].line-numbers-mode::after {
+  height: calc(100% - 1px);
 }
-div[class*=language-].line-numbers-mode pre{
-  margin-top:0;
-  margin-bottom:0;
+div[class*='language-'].line-numbers-mode pre {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-pre[class*=language-] code{
-  font-size:14px !important;
-  line-height:1.4 !important;
+pre[class*='language-'] code {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
 }
-
 </style>
