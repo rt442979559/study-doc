@@ -11,6 +11,8 @@ export const pagesComponents = {
   "v-efdfe886": defineAsyncComponent(() => import(/* webpackChunkName: "v-efdfe886" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/map/cesium.html.vue")),
   // path: /map/gdmap.html
   "v-98e88ab4": defineAsyncComponent(() => import(/* webpackChunkName: "v-98e88ab4" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/map/gdmap.html.vue")),
+  // path: /resource/utils.html
+  "v-1370dfd0": defineAsyncComponent(() => import(/* webpackChunkName: "v-1370dfd0" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/resource/utils.html.vue")),
   // path: /skip/components.html
   "v-99b28928": defineAsyncComponent(() => import(/* webpackChunkName: "v-99b28928" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/skip/components.html.vue")),
   // path: /skip/echarts.html

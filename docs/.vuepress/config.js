@@ -1,6 +1,8 @@
-const path = require("path");
+const path = require('path')
 const { defaultTheme } = require('@vuepress/theme-default')
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
+const {
+  registerComponentsPlugin,
+} = require('@vuepress/plugin-register-components')
 const { viteBundler } = require('@vuepress/bundler-vite')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 
@@ -21,9 +23,9 @@ module.exports = {
         'link',
         {
           rel: 'icon',
-          href: '/favicon.ico'
-        }
-      ]
+          href: '/favicon.ico',
+        },
+      ],
     ],
     navbar: [
       { text: '主页', link: '/' },
@@ -35,7 +37,12 @@ module.exports = {
           { text: '方法', link: '/skip/methods/' },
           { text: '插件', link: '/skip/plugins/' },
           { text: '组件', link: '/skip/components/' },
-        ]
+        ],
+      },
+      {
+        text: '资源',
+        ariaLabel: 'resource',
+        children: [{ text: '工具', link: '/resource/utils/' }],
       },
       {
         text: '地图',
@@ -43,23 +50,20 @@ module.exports = {
         children: [
           { text: '百度', link: '/map/bdmap/' },
           { text: '高德', link: '/map/gdmap/' },
-          { text: 'cesium', link: '/map/cesium/' }
-        ]
+          { text: 'cesium', link: '/map/cesium/' },
+        ],
       },
     ],
-    sidebar:{
-      '/skip/':[
+    sidebar: {
+      '/skip/': [
         '/skip/echarts.md',
         '/skip/methods.md',
         '/skip/plugins.md',
         '/skip/components.md',
       ],
-      '/map/':[
-        '/map/bdmap.md',
-        '/map/gdmap.md',
-        '/map/cesium.md',
-      ]
-    }
+      '/map/': ['/map/bdmap.md', '/map/gdmap.md', '/map/cesium.md'],
+      '/resource/': ['/resource/utils.md'],
+    },
   }),
   plugins: [
     // 注册全局组件
@@ -71,7 +75,7 @@ module.exports = {
     }),
     prismjsPlugin({
       // 配置项
-    })
+    }),
   ],
   // 引入别名
   markdown: {

@@ -9,6 +9,8 @@ export const pagesData = {
   "v-efdfe886": () => import(/* webpackChunkName: "v-efdfe886" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/map/cesium.html.js").then(({ data }) => data),
   // path: /map/gdmap.html
   "v-98e88ab4": () => import(/* webpackChunkName: "v-98e88ab4" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/map/gdmap.html.js").then(({ data }) => data),
+  // path: /resource/utils.html
+  "v-1370dfd0": () => import(/* webpackChunkName: "v-1370dfd0" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/resource/utils.html.js").then(({ data }) => data),
   // path: /skip/components.html
   "v-99b28928": () => import(/* webpackChunkName: "v-99b28928" */"D:/chijh/workspace/my/study-doc/docs/.vuepress/.temp/pages/skip/components.html.js").then(({ data }) => data),
   // path: /skip/echarts.html
