@@ -1,0 +1,3 @@
+Sitemap: https://rt442979559.github.io/sitemap.xml
+
+User-agent: *

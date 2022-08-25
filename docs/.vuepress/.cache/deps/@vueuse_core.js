@@ -1,5 +1,5 @@
 import {
-  computed2 as computed,
+  computed,
   customRef,
   effectScope,
   getCurrentInstance,
@@ -26,28 +26,11 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-ZDNIHV5N.js";
-import "./chunk-KLB3EZKS.js";
-import {
-  init_define_EXTERNAL_LINK_ICON_LOCALES,
-  init_define_MZ_ZOOM_OPTIONS
-} from "./chunk-5GTQYC3P.js";
-
-// dep:@vueuse_core
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/@vuepress/theme-default/node_modules/@vueuse/core/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
-
-// node_modules/@vuepress/theme-default/node_modules/@vueuse/core/node_modules/@vueuse/shared/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
+} from "./chunk-TVEHGJEI.js";
+import "./chunk-AVTOPKID.js";
+import "./chunk-FEFTYQ2P.js";
 
 // node_modules/@vuepress/theme-default/node_modules/@vueuse/core/node_modules/vue-demi/lib/index.mjs
-init_define_EXTERNAL_LINK_ICON_LOCALES();
-init_define_MZ_ZOOM_OPTIONS();
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {

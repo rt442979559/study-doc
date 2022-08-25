@@ -6,6 +6,13 @@ const {
 const { viteBundler } = require('@vuepress/bundler-vite')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 
+const autometa_options = {
+  site: {
+    name: 'ChiJiongHan',
+  },
+  canonical_base: 'https://rt442979559.github.io/',
+}
+
 module.exports = {
   port: '8080', //端口号
   title: 'study | doc',
@@ -15,7 +22,7 @@ module.exports = {
     repo: 'rt442979559/study-doc',
     docsRepo: 'rt442979559/doc',
     docsDir: 'docs | study',
-    // smoothScroll:true,
+    smoothScroll: true,
     editLink: false,
     sidebarDepth: 3,
     head: [
@@ -26,7 +33,11 @@ module.exports = {
           href: '/favicon.ico',
         },
       ],
-      ['script', { src: '../resource/map.js' }],
+      ['meta', { name: 'keywords', content: 'ChiJiongHan | 技术文档' }],
+      [
+        'meta',
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      ],
     ],
     navbar: [
       { text: '主页', link: '/' },
@@ -77,6 +88,16 @@ module.exports = {
     prismjsPlugin({
       // 配置项
     }),
+    ['autometa', autometa_options],
+    [
+      'sitemap',
+      {
+        hostname: 'https://rt442979559.github.io/',
+        // 排除无实际内容的页面
+        exclude: ['/404.html'],
+      },
+    ],
+    ['vuepress-plugin-baidu-autopush'],
   ],
   // 引入别名
   markdown: {

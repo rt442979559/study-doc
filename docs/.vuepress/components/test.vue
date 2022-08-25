@@ -7,9 +7,9 @@
 <script setup lang='ts'>
 // import { reactive } from 'vue'
 
-const {useArrayEvery} = require('useArrayEvery');
+// const {useArrayEvery} = require('useArrayEvery');
 
-console.log(useArrayEvery);
+// console.log(useArrayEvery);
 
 // const positive = useArrayFind(list, val => val > 0)
 // list.push(1)
