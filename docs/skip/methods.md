@@ -345,22 +345,25 @@ methods: {
 ## 校验规则
 
 ### 是否为外链
+
 ```ts
 export const isExternal = (path): boolean => {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
 ```
 
-### 是否为Url
+### 是否为 Url
+
 ```ts
 export const isUrl = (path: string): boolean => {
   const reg =
-    /^(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?(\/#\/)?(?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
-  return reg.test(path);
+    /^(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?(\/#\/)?(?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/
+  return reg.test(path)
 }
 ```
 
 ### 密码校验
+
 ```ts
 export const isPassword = (str): boolean => {
   const reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{6,16}$/
@@ -369,6 +372,7 @@ export const isPassword = (str): boolean => {
 ```
 
 ### 是否为字符串
+
 ```ts
 export const isString = (): boolean => {
   return typeof str === 'string' || str instanceof String
@@ -376,6 +380,7 @@ export const isString = (): boolean => {
 ```
 
 ### 是否为数组
+
 ```ts
 export const isArray = (arr): boolean => {
   if (typeof Array.isArray === 'undefined') {
@@ -386,6 +391,7 @@ export const isArray = (arr): boolean => {
 ```
 
 ### 是否为手机号
+
 ```ts
 export const isPhone = (phone): boolean => {
   return /^1[3456789]\d{9}$/.test(phone)
@@ -393,6 +399,7 @@ export const isPhone = (phone): boolean => {
 ```
 
 ### 随机数（uuid）
+
 ```ts
 export const uuid = (length = 32): string => {
   const num = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
@@ -405,15 +412,48 @@ export const uuid = (length = 32): string => {
 ```
 
 ### 随机数（两数之间）
+
 ```ts
 export const getRandomNum = (min, max): number => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 ```
+
 ## 工具库@vueuse/core
 
 ### 引入
+
 [vueuse/core](https://www.npmjs.com/package/@vueuse/core)
 
 ### 文档
+
 [方法文档](https://vueuse.org/core/useDraggable/)
+
+## 防抖函数
+
+```ts
+export const debounce = (fn, delay = 200, immdiate = false) => {
+  let timer = null
+  let isInvoke = false
+  const _debounce = (...arg) => {
+    if (timer) clearTimeout(timer)
+    if (immdiate && !isInvoke) {
+      fn.apply(this, arg)
+      isInvoke = true
+    } else {
+      timer = setTimeout(() => {
+        fn.apply(this, arg)
+        isInvoke = false
+        timer = null
+      }, delay)
+    }
+  }
+  // 取消功能
+  _debounce.cancel = function () {
+    if (timer) clearTimeout(timer)
+    timer = null
+    isInvoke = false
+  }
+  return _debounce
+}
+```
