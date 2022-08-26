@@ -17,7 +17,7 @@ import {
   cloneVNode,
   compatUtils,
   compile,
-  computed,
+  computed2 as computed,
   createApp,
   createBaseVNode,
   createBlock,
@@ -137,7 +137,7 @@ import {
   withMemo,
   withModifiers,
   withScopeId
-} from "./chunk-TVEHGJEI.js";
+} from "./chunk-ZDNIHV5N.js";
 import {
   camelize,
   capitalize,
@@ -146,8 +146,15 @@ import {
   normalizeStyle,
   toDisplayString,
   toHandlerKey
-} from "./chunk-AVTOPKID.js";
-import "./chunk-FEFTYQ2P.js";
+} from "./chunk-KLB3EZKS.js";
+import {
+  init_define_EXTERNAL_LINK_ICON_LOCALES,
+  init_define_MZ_ZOOM_OPTIONS
+} from "./chunk-5GTQYC3P.js";
+
+// dep:vue
+init_define_EXTERNAL_LINK_ICON_LOCALES();
+init_define_MZ_ZOOM_OPTIONS();
 export {
   BaseTransition,
   Comment,
