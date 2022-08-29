@@ -18,6 +18,7 @@ module.exports = {
   title: 'study | doc',
   description: 'ChiJiongHan | Study | Doc',
   logo: '🚀',
+  base: '/doc/',
   theme: defaultTheme({
     repo: 'rt442979559/study-doc',
     docsRepo: 'rt442979559/doc',

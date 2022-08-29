@@ -4,12 +4,13 @@
   </div>
 </template>
 <script lang="ts" setup async>
-import { onMounted, ref } from 'vue'
+import { onMounted, nextTick } from 'vue'
 import { useCesium } from './cesium/useCesium'
 
-const { init, Cesium } = useCesium()
+const { init } = useCesium()
 
 onMounted(async () => {
+  await nextTick()
   await init()
 })
 </script>
