@@ -2,11 +2,11 @@ import {
   isArray,
   isFunction,
   isString
-} from "./chunk-KLB3EZKS.js";
+} from "./chunk-YWUEXLDG.js";
 import {
   init_define_EXTERNAL_LINK_ICON_LOCALES,
   init_define_MZ_ZOOM_OPTIONS
-} from "./chunk-5GTQYC3P.js";
+} from "./chunk-QSR5EZYE.js";
 
 // dep:@vuepress_shared
 init_define_EXTERNAL_LINK_ICON_LOCALES();
